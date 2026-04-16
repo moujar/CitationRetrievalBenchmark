@@ -54,13 +54,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.data import load_queries, load_corpus, load_qrels
 from src.evaluate import evaluate, print_results, METRICS
-from src.retrievers import (
-    TFIDFRetriever,
-    BM25Retriever,
-    DenseRetriever,
-    HybridRetriever,
-    CrossEncoderReranker,
-)
+from src.retrievers.tfidf import TFIDFRetriever
+from src.retrievers.bm25 import BM25Retriever
+from src.retrievers.dense import DenseRetriever
+from src.retrievers.hybrid import HybridRetriever
+from src.retrievers.reranker import CrossEncoderReranker
 
 RESULTS_DIR = Path(__file__).parent.parent / "results"
 
@@ -113,13 +111,11 @@ def build_registry() -> dict:
 
     # ── Graph-based retrievers (require: pip install hnswlib pynndescent) ──
     try:
-        from src.retrievers import (
-            HNSWDenseRetriever,
-            DomainFilteredHNSW,
-            DomainPartitionedGraphRetriever,
-            NNDescentGraphExpander,
-            MultiGraphRRF,
-        )
+        from src.retrievers.hnsw_dense import HNSWDenseRetriever
+        from src.retrievers.filtered_hnsw import DomainFilteredHNSW
+        from src.retrievers.domain_graph import DomainPartitionedGraphRetriever
+        from src.retrievers.nndescent_expand import NNDescentGraphExpander
+        from src.retrievers.multigraph_rrf import MultiGraphRRF
 
         graph_registry = {
             # G1: HNSW drop-in — M sweep
