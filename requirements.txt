@@ -10,6 +10,10 @@ rank-bm25>=0.2.2
 # Dense retrieval & reranking
 sentence-transformers>=2.7.0
 
+# Graph-based retrieval (G1–G5 approaches)
+hnswlib>=0.7.0       # HNSW index: G1, G2, G3, G5
+pynndescent>=0.5.11  # NNDescent K-NN graph: G4
+
 # Visualization
 matplotlib>=3.7.0
 seaborn>=0.12.0
