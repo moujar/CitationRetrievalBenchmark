@@ -1,4 +1,4 @@
-# IR Challenge — Retrieval Benchmark
+# IR Challenge Retrieval Benchmark
 
 Open-source benchmarking of retrieval approaches for the **scientific citation retrieval** challenge.
 
@@ -10,15 +10,24 @@ Given a query paper, retrieve the most relevant documents from a corpus of **20,
 
 > Run `python scripts/run_benchmark.py` to reproduce.
 
-| Retriever | NDCG@10 | Recall@10 | Recall@100 | MRR@10 | MAP |
-|---|---|---|---|---|---|
-| Hybrid RRF (BM25 + Dense) | — | — | — | — | — |
-| Hybrid RRF (TF-IDF + Dense) | — | — | — | — | — |
-| CrossEncoder (Dense → rerank) | — | — | — | — | — |
-| CrossEncoder (BM25 → rerank) | — | — | — | — | — |
-| Dense (all-MiniLM-L6-v2) | — | — | — | — | — |
-| BM25 | — | — | — | — | — |
-| TF-IDF | — | — | — | — | — |
+## Summary Table
+
+| # | Approach | Training NDCG@10  |
+|---|----------|:----------------:|
+| 1 | BM25 on Title+Abstract | 0.4663 |
+| 2 | TF-IDF with bigrams | 0.4724 |
+| 3 | MiniLM semantic search | 0.5073 |
+| 4 | BM25 on body chunks | 0.5197 |
+| 5 | RRF fusion (BM25 + MiniLM) | 0.5534 |
+| 6 | Hard domain filter + 5 signals | 0.6398  |
+| 7 | Hard domain + 6 signals | 0.6572 |
+| 8 | 6 signals + CV-tuned weights | 0.6937  |
+| 9 | Fine-tuned MiniLM + 7 signals | 0.7018 | 
+| 10 | CE v1 reranking (rk=30) | 0.7666 |
+| 11 | CE v1 + interpolation (α=0.8) | 0.7914 | 
+| 12 | CE v1 + interpolation (α=0.4) | 0.8001 | 
+| 13 | CE v1 + interpolation (α=0.45) | 0.8059 | 
+| 14 | **CE v2 + interpolation (α=0.5)** | **0.8675** |
 
 Fill in the table by running the benchmark and pasting your results.
 
