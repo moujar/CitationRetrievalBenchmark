@@ -31,11 +31,10 @@ Experimente : <a href="https://github.com/moujar/CitationRetrievalBenchmark/blob
 | 7 | Hard domain + 6 signals | 0.6572 |
 | 8 | 6 signals + CV-tuned weights | 0.6937  |
 | 9 | Fine-tuned MiniLM + 7 signals | 0.7018 | 
-| 10 | CE v1 reranking (rk=30) | 0.7666 |
-| 11 | CE v1 + interpolation (α=0.8) | 0.7914 | 
-| 12 | CE v1 + interpolation (α=0.4) | 0.8001 | 
-| 13 | CE v1 + interpolation (α=0.45) | 0.8059 | 
-| 14 | **CE v2 + interpolation (α=0.5)** | **0.8675** |
+| 10 | DomainFilter+7-signalensemble | 0.7495 |
+| 11 | 10signals+Optuna | 0.7541 | 
+| 12 | Granite-r2+1000trials | 0.7572 | 
+| 13 | **ModernBERTcMaxSim+1500trials** | **0.760** |
 
 Fill in the table by running the benchmark and pasting your results.
 
