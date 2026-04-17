@@ -7,9 +7,11 @@ Given a query paper, retrieve the most relevant documents from a corpus of **20,
 Hard Domain Filter + 7-Signal Ensemble: <a href="https://colab.research.google.com/drive/1fdq1odhoi3zWFtLd6yXkEI_cSZwgZo1X?usp=sharing">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" />
   </a>
+  
 Experimente : <a href="https://github.com/moujar/CitationRetrievalBenchmark/blob/main/notebooks/experimental_research.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" />
   </a>
+  
 ---
 
 ## Leaderboard
