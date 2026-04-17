@@ -1,6 +1,6 @@
 # IR Challenge Retrieval Benchmark
 
-Open-source benchmarking of retrieval approaches for the **scientific citation retrieval** challenge.
+Benchmarking of retrieval approaches for the **scientific citation retrieval** challenge.
 
 Given a query paper, retrieve the most relevant documents from a corpus of **20,000 scientific papers** based on citation relationships (100 queries, 19 domains, Semantic Scholar).
 
