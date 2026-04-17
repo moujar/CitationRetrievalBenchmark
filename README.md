@@ -16,6 +16,8 @@ Experimente : <a href="https://github.com/moujar/CitationRetrievalBenchmark/blob
 
 ## Leaderboard
 
+![Competition Leaderboard](imgs/Leaderboard.png)
+
 > Run `python scripts/run_benchmark.py` to reproduce.
 
 ## Summary Table
