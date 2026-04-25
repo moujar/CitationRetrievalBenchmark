@@ -14,7 +14,7 @@ Experimente : <a href="https://github.com/moujar/CitationRetrievalBenchmark/blob
   
 ---
 
-## Leaderboard
+## Leaderboard:
 
 ![Competition Leaderboard](imgs/Leaderboard.png)
 
